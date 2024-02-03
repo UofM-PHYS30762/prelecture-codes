@@ -1,6 +1,7 @@
 // PL2/dynamic.cpp
 // Example of program using dynamic memory allocation (PHYS30762)
 // Source: Prof. Niels Walet's code repository
+//Last updated: Charanjit Kaur, 31/01/24
 #include<iostream>
 int main()
 {
