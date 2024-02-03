@@ -1,8 +1,8 @@
 // PL2/bypointer.cpp
-// Call by value using pointer
+// Call by value using pointer (PHYS30762)
 // Source: Prof. Niels Walet's code repository
 #include<iostream> 
-void double_value(double *ptr_double) 
+void double_value(double* ptr_double) 
 {
   (*ptr_double)*=2;
 }

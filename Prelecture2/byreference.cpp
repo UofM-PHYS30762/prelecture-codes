@@ -1,10 +1,10 @@
-// PL2/byvalue.cpp
-// Demonstration of a call by value (PHYS30762)
+// PL2/byreference.cpp (PHYS30762)
+// Call by value using reference in function definition 
 // Source: Prof. Niels Walet's code repository
 #include<iostream>
-void double_value(double value) 
-{ 
-  value*=2; 
+void double_value(double& reference)
+{
+  reference*=2;
 }
 int main() 
 { 
@@ -13,4 +13,4 @@ int main()
   double_value(number); 
   std::cout<<number<<std::endl; 
   return 0; 
-} 
+}
