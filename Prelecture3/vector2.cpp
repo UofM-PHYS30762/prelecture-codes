@@ -1,6 +1,6 @@
 // PL3/vector2.cpp
 // Demonstration of the vector container
-// Niels Walet, last updated 04/12/2019
+// Source: Prof. Niels Walet's code repository
 #include<iostream>
 #include<vector>
 #include<string>

@@ -1,6 +1,6 @@
 // PL3/vector3.cpp
 // Demonstration of the vector container and the use of iterators
-// Niels Walet, last updated 04/12/2019
+// Source: Prof. Niels Walet's code repository
 #include<iostream>
 #include<vector>
 int main() 
@@ -13,8 +13,8 @@ int main()
   std::vector<double>::iterator vector_end{vector_double.end()};
   std::vector<double>::iterator vector_iterator;
   for(vector_iterator=vector_begin;
-      vector_iterator<vector_end;
-      ++vector_iterator)
+    vector_iterator<vector_end;
+    ++vector_iterator)
     std::cout<<*vector_iterator<<std::endl;
   return 0;
 }
