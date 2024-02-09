@@ -12,14 +12,14 @@ public:
   double momentum;
   double energy;
 };
-void print_data(const struct particle &p)
+void print_data(const particle &p)
 {
   std::cout.precision(3); // 2 significant figures
   std::cout<<"Particle: [type,m,p,E] = ["<<p.type<<","<< p.mass
 	   <<","<<p.momentum<<","<<p.energy<<"]"<<std::endl;
   return;
 }
-double gamma(const struct particle &p)
+double gamma(const particle &p)
 {
   return p.energy/p.mass;
 }
