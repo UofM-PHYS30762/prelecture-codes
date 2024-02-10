@@ -2,7 +2,6 @@
 // Demonstration  of the "C" style array
 // Source: Prof. Niels Walet's code repository
 #include<iostream>
-#include<string>
 int main() 
 {
   const size_t n_a{5};
