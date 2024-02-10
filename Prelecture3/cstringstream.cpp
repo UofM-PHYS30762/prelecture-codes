@@ -4,6 +4,7 @@
 // Last updated: Charanjit Kaur, 07/02/24
 #include<iostream>
 #include<cstring>
+#include<cstdio>
 int main() 
 {
   char output_filename[100];
