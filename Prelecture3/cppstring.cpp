@@ -34,7 +34,7 @@ int main()
   // extract
   const size_t first{18};
   const size_t last{22};
-  string a_word = joined_string.substr(first,last-first+1);
+  string a_word{joined_string.substr(first,last-first+1)};
   std::cout<<"Extracting characters "<<first<<"-"<<last<<" from joined string: "<<a_word<<std::endl;
   return 0;
 }
