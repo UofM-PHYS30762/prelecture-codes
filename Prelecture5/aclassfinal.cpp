@@ -21,7 +21,7 @@ public:
   double get_y() const {return y;}
   double get_z() const {return z;}
   // Function to calculate dot product of two vectors
-  double dot_product(const vector3 &v) const
+  double dot_product(const vector3& v) const
   {
     return (x*v.x+y*v.y+z*v.z);
   }
@@ -48,13 +48,13 @@ public:
 }; // End of class
 // Friend functions (not members but have access to member data)
 // Non-member function to left-add scalar to vector
-vector3 operator+(double scalar, const vector3 &v)
+vector3 operator+(double scalar, const vector3& v)
 {
   vector3 temp{scalar+v.x,scalar+v.y,scalar+v.z};
   return temp;
 }
 // Non-member function to overload ostream (e.g., cout) for vector3
-std::ostream & operator<<(std::ostream &os, const vector3 &v)
+std::ostream & operator<<(std::ostream& os, const vector3& v)
   {
     os<<"("<<v.x<<","<<v.y<<","<<v.z<<")";
     return os;
