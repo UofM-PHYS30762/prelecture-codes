@@ -25,7 +25,7 @@ public:
   // Function to add a scalar to each vector component
   void add_scalar(const double s) {x+=s; y+=s; z+=s;}
 };
-double dot_product(const vector3 &v1, const vector3 &v2)
+double dot_product(const vector3& v1, const vector3& v2)
 {
   double result = 
     v1.get_x()*v2.get_x() + 
