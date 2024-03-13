@@ -2,10 +2,13 @@
 // The use of an abstract base class
 // Niels Walet, last updated 06/01/2022
 #include<iostream>
+#include<memory>
+
 class particle
 {
 public:
-  virtual ~particle(){} // Need this!
+  //the print-out here is to show you that the destructor of the base class is called after that of the derived class
+  virtual ~particle(){std::cout << "Particle destructor called" << std::endl;} // Need this!
   virtual void info()=0; // pure virtual function   
 };
 class electron : public particle
@@ -31,14 +34,17 @@ public:
 
 int main()
 {
-  particle *particle_pointer = new ion{1,2};
-  particle_pointer->info(); 
-  delete particle_pointer;
+  // Creates a ion but with a pointer to the abstract base class 'particle'
+  std::unique_ptr<particle> particle_pointer_for_ion = std::make_unique<ion>(1,2);
+  particle_pointer_for_ion->info(); 
   //
-  particle_pointer = new electron;
-  particle_pointer->info();
-  delete particle_pointer;
+  std::unique_ptr<particle> particle_pointer_for_electron = std::make_unique<electron>();
+  particle_pointer_for_electron->info(); 
   //
+  // Try to uncomment this line and see what kind of error you get...
+  // You cannot instantiate an abstract class!
+  // std::unique_ptr<particle> particle_pointer_for_electron = std::make_unique<particle>(-1);
+ 
   return 0;
 }
 

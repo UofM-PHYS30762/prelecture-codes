@@ -35,7 +35,8 @@ public:
 
 int main()
 {
-  // Array of 2 base class pointers
+  // Array of 2 base class pointers, done with raw pointers to exemplify how ** works...
+  // To do this in a more sensible way (std::vector and smart pointers) see polymorphicvector.cpp
   particle **particle_array = new particle*[2];
   particle_array[0] = new ion{1,2};
   particle_array[1] = new electron; 
@@ -45,6 +46,7 @@ int main()
   delete particle_array[0]; 
   delete particle_array[1]; 
   delete[] particle_array;
+
   return 0;
 }
 

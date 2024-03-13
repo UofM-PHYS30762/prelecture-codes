@@ -3,6 +3,8 @@
 // Niels Walet, Last modified 06/01/2022
 #include<iostream>
 #include<vector>
+#include<memory>
+
 // Abstract base class (use as interface only)
 class particle
 {
@@ -35,17 +37,12 @@ public:
 };
 int main()
 {
-  std::vector<particle*> particles;
-  particles.push_back(new ion{1,3});
-  particles.push_back(new electron);
+  std::vector<std::unique_ptr<particle>> particles;
+  particles.push_back(std::make_unique<ion>(1,3));
+  particles.push_back(std::make_unique<electron>());
   particles[0]->info();
-  particles[1]->info();
+  //particles[1]->info();
   std::cout<<"particles has size "<<particles.size()<<std::endl;
-  for (auto particle_it=particles.begin();
-       particle_it<particles.end();
-       ++particle_it) delete *particle_it;
-  particles.clear();
-  std::cout<<"particle_vector now has size "<<particles.size()<<std::endl;
   return 0;
 }
 

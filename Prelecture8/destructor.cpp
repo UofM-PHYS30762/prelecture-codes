@@ -3,6 +3,7 @@
 // Niels Walet, Last modified 03/12/2019
 #include<iostream>
 #include<string>
+#include<memory>
 class particle
 {
 protected:
@@ -29,12 +30,11 @@ public:
 int main()
 {
   // Array of base and derived objects, one particle and one ion 
-  particle *particle_array[2];
-  particle_array[0] = new particle{2}; // He 
-  particle_array[1] = new ion{1,2};    // He+
+  std::unique_ptr<particle> particle_array[2];
+  particle_array[0] = std::make_unique<particle>(2); // He 
+  particle_array[1] = std::make_unique<ion>(1,2);    // He+
   particle_array[0]->info(); // print info for particle
   particle_array[1]->info(); // print info for ion
-  delete particle_array[0]; particle_array[0]=0;
-  delete particle_array[1]; particle_array[1]=0;
+  //no need for delete, memory management is done for you by the smart pointer!
   return 0;
 }
