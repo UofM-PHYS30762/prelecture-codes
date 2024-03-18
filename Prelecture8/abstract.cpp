@@ -43,7 +43,7 @@ int main()
   //
   // Try to uncomment this line and see what kind of error you get...
   // You cannot instantiate an abstract class!
-  // std::unique_ptr<particle> particle_pointer_for_electron = std::make_unique<particle>(-1);
+  //std::unique_ptr<particle> particle_pointer_for_electron = std::make_unique<particle>(-1);
  
   return 0;
 }

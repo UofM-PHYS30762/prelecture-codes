@@ -30,7 +30,8 @@ public:
 
 //Try: this would not work (passing by value would make a copy of a unique pointer, not allowed)
 //void prettyParticlePrinter (std::unique_ptr<particle> theParticle) {
-//so, in this case you can pass the raw pointer instead (use also const as you're not modifying it, bad things will happen if you do)
+//so, in this case you can pass the raw pointer instead (use also const as you're not modifying it, 
+//bad things will happen if you do)
 //for more advanced and fun reading: https://herbsutter.com/2013/06/05/gotw-91-solution-smart-pointer-parameters/
 void prettyParticlePrinter (const particle* theParticle) {
    //add some ascii art

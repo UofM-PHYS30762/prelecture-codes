@@ -31,7 +31,7 @@ int main()
 {
   // Array of base and derived objects, one particle and one ion 
   std::unique_ptr<particle> particle_array[2];
-  particle_array[0] = std::make_unique<particle>(2); // He 
+  particle_array[0] = std::make_unique<particle>(2); // generic particle with charge q 
   particle_array[1] = std::make_unique<ion>(1,2);    // He+
   particle_array[0]->info(); // print info for particle
   particle_array[1]->info(); // print info for ion
